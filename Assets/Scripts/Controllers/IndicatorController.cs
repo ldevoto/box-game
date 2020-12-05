@@ -21,10 +21,15 @@ namespace Controllers
         {
             return indication;
         }
+
+        public PlatformController GetPlatformController()
+        {
+            return gameObject.transform.parent.GetComponent<PlatformController>();
+        }
     }
 
     public enum IndicationType
     {
-        CLIFF, JUMP, BUTTON, LASER, TELEPORT, EXIT, EMPTY
+        CLIFF, JUMP, BUTTON, LASER, TELEPORT, EXIT, EMPTY, PLATFORM, FAKE_PLATFORM
     }
 }

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0d27e3071547b2a32a116fa64716c7, type: 3}
+  m_Name: BoxAppear
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.03526014
+      outSlope: 0.03526014
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.7963944
+      value: 1
+      inSlope: 4.811178
+      outSlope: -1.4042442
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.13172501
+      outWeight: 0.21469785
+    - serializedVersion: 3
+      time: 0.91303134
+      value: 0.9568436
+      inSlope: 0.024038257
+      outSlope: 0.024038257
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.24640226
+      outWeight: 0.3700459
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.4100964
+      outSlope: 1.4100964
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 0.1490002
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
+  minValue: 5
+  maxValue: 0
+  deltaAnimate: 0

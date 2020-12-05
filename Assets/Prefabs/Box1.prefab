@@ -901,6 +901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationRoll: {fileID: 11400000, guid: 97aaa4f07efaf074d8838ee45823021a, type: 2}
   animationFailedRoll: {fileID: 11400000, guid: 471c2ffbe40844b4d8c714ac8e5d28f2, type: 2}
+  animationAppear: {fileID: 11400000, guid: 532fe41558463184687021ff4ab134f3, type: 2}
+  animationFall: {fileID: 11400000, guid: 5dde913adfc38a443a34136ca8c9b47d, type: 2}
   animator: {fileID: 3117808443123590628}
 --- !u!95 &3117808443123590628
 Animator:

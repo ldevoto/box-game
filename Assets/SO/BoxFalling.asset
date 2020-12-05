@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0d27e3071547b2a32a116fa64716c7, type: 3}
+  m_Name: BoxFalling
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 4.4051704
+      outSlope: 4.4051704
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 0.19224879
+    - serializedVersion: 3
+      time: 0.37718737
+      value: 0.37889007
+      inSlope: 0.17597589
+      outSlope: 0.17597589
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.5205273
+      outWeight: 0.3709799
+    - serializedVersion: 3
+      time: 0.6291703
+      value: 0.43352157
+      inSlope: 0.19518468
+      outSlope: 0.22312248
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.24243212
+      outWeight: 0.5754202
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 21.061342
+      outSlope: 21.061342
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 0.046052895
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1.5
+  minValue: 0
+  maxValue: 90
+  deltaAnimate: 1
