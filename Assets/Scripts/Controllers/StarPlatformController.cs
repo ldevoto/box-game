@@ -16,8 +16,8 @@ namespace Controllers
             taken = true;
             star.SetActive(false);
             pickUp.gameObject.SetActive(true);
-            var main = pickUp.main;
-            main.simulationSpeed = 5f;
+            //var main = pickUp.main;
+            //main.simulationSpeed = 5f;
             pickUp.Play();
         }
 

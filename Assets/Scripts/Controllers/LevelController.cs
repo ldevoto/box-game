@@ -26,6 +26,10 @@ namespace Controllers
 
         private void Restart()
         {
+            if (player)
+            {
+                Destroy(player.gameObject);
+            }
             HidePlatforms();
             StartCoroutine(SpawnPlatforms());
         }
