@@ -16,6 +16,8 @@ namespace Controllers
 
         public Action OnExitLevel;
         public Action OnDead;
+        public Action OnMove;
+        public Action OnCaptureStar;
 
         private bool controlsCaptured = false;
         private Movement movement = Movement.NONE;
@@ -68,6 +70,7 @@ namespace Controllers
 
         private void DetermineMovementBehaviour(Direction direction)
         {
+            OnMove?.Invoke();
             var indicatorController = GetIndicatorController(direction);
             var indication = GetIndication(indicatorController);
             switch (indication)
@@ -77,6 +80,9 @@ namespace Controllers
                     break;
                 case IndicationType.PLATFORM:
                     StartCoroutine(animationRoll.Animate(MoveTowards(direction), StopMoving));
+                    break;
+                case IndicationType.STAR_PLATFORM:
+                    StartCoroutine(animationRoll.Animate(MoveTowards(direction), CaptureStar(indicatorController), StopMoving));
                     break;
                 case IndicationType.EXIT:
                     StartCoroutine(animationRoll.Animate(MoveTowards(direction), ExitLevel));
@@ -95,6 +101,17 @@ namespace Controllers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private Action CaptureStar(IndicatorController indicatorController)
+        {
+            var starPlatformController = indicatorController.GetMainController<StarPlatformController>();
+            return () =>
+            {
+                if (!starPlatformController.HasStar()) return;
+                starPlatformController.PickUpStar();
+                OnCaptureStar?.Invoke();
+            };
         }
 
         private IndicatorController GetIndicatorController(Direction direction)

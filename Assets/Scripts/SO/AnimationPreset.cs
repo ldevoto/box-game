@@ -13,7 +13,7 @@ namespace SO
         public float maxValue;
         public bool deltaAnimate;
 
-        public IEnumerator Animate(Action<float> onFrame, Action onFinished = null)
+        public IEnumerator Animate(Action<float> onFrame, params Action[] onFinishedList)
         {
             var lastValue = 0f;
             var elapsedTime = 0f;
@@ -29,7 +29,10 @@ namespace SO
 
             var finalValue = GetValue(curve[curve.length - 1].time);
             onFrame?.Invoke(deltaAnimate ? finalValue - lastValue : finalValue);
-            onFinished?.Invoke();
+            foreach (var onFinished in onFinishedList)
+            {
+                onFinished?.Invoke();
+            }
         }
 
         private float GetValue(float time)

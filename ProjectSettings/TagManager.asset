@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Indicator
   - SpawnPoint
+  - Star
   layers:
   - Default
   - TransparentFX

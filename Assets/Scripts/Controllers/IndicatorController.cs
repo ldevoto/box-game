@@ -6,6 +6,7 @@ namespace Controllers
     public class IndicatorController : MonoBehaviour
     {
         [SerializeField] private IndicationType indication = IndicationType.EMPTY;
+        [SerializeField] private GameObject mainController = null;
 
         private void Awake()
         {
@@ -26,10 +27,15 @@ namespace Controllers
         {
             return gameObject.transform.parent.GetComponent<PlatformController>();
         }
+
+        public T GetMainController<T>()
+        {
+            return mainController.GetComponent<T>();
+        }
     }
 
     public enum IndicationType
     {
-        CLIFF, JUMP, BUTTON, LASER, TELEPORT, EXIT, EMPTY, PLATFORM, FAKE_PLATFORM
+        CLIFF, JUMP, BUTTON, LASER, TELEPORT, EXIT, EMPTY, PLATFORM, FAKE_PLATFORM, STAR_PLATFORM
     }
 }
